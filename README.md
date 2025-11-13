@@ -8,4 +8,4 @@ When you want to know how many files of each extension are present in a file tre
 
 ## Pdf work
 ### jpgs\_to\_pdf
-Use to convert and merge jpg's into a single pdf.
+Use to convert and merge jpg's into a single pdf using Ghostscript.
