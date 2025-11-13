@@ -7,5 +7,5 @@ Scripts for simple tasks
 When you want to know how many files of each extension are present in a file tree.
 
 ## Pdf work
-### jpgs_to_pdf
+### jpgs\_to\_pdf
 Use to convert and merge jpg's into a single pdf.
