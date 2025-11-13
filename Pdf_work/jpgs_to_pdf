@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# This script converts a directory of .jpg files to a single .pdf file using Ghostscript.
+
+# Input directory containing .jpg files
+input_directory="."
+
+# Output PDF file
+output_pdf="out.pdf"
+
+# Check if Ghostscript is installed
+if ! command -v gs &> /dev/null; then
+    echo "Ghostscript is not installed. Please install it and try again."
+    exit 1
+fi
+
+# Convert .jpg files to .pdf
+for jpg_file in "$input_directory"/*.jpg; do
+    base_name=$(basename "$jpg_file" .jpg)
+    echo $bsae_name
+    gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$input_directory/$base_name.pdf" "$jpg_file"
+done
+
+# Stitch the individual PDFs into a single PDF
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$output_pdf" "$input_directory"/*.pdf
+
+echo "Conversion complete. Output saved to $output_pdf"
+
